@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Product from "./Product"
 import Student from './Student'
+import Bonus from './Bonus'
+import Fetch from './Fetch'
 
 const App = () => {
   const [data,setdata] = useState({
@@ -36,6 +38,9 @@ const App = () => {
     </form>
     <Product/>
     <Student/>
+    <Bonus/>
+    <h3>Api fetch</h3>
+    <Fetch/>
     </>
   )
 }
