@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Product from "./Product"
+import Student from './Student'
 
 const App = () => {
   const [data,setdata] = useState({
@@ -34,6 +35,7 @@ const App = () => {
       <input type="submit"  value={"submit"}/>
     </form>
     <Product/>
+    <Student/>
     </>
   )
 }
