@@ -1,13 +1,19 @@
-import React from 'react'
+
 import { useState } from 'react'
+import Product from './Product'
+import Fetchdata from './Fetchdata'
+import Fetch from './Fetch'
 
 const App = () => {
+
+
   const [state,setState] = useState({
      name:'',
      department:'',
      salary:''
   })
  const [show,setShow] = useState([])
+ 
 
 
 
@@ -36,6 +42,9 @@ const App = () => {
         })}
        </ul>
        <p>{show.length}</p>
+       <Product/>
+       <Fetchdata/>
+       <Fetch/>
     </>
   )
 }
