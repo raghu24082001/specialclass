@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+</head>
+<body>
+      <div >
+        <ul id="employeeList">
+
+        </ul>
+
+        <ul id="userList">
+
+        </ul>
+
+        <ul id="product"> </ul>
+      </div>
+       <script>
+        //Task 1
+        const employees = [ { id: 1, name: "John", salary: 25000 }, { id: 2, name: "David", salary: 45000 }, { id: 3, name: "Sam", salary: 60000 }, { id: 4, name: "Peter", salary: 30000 } ]
+         
+        const employeeList = document.getElementById("employeeList");
+        
+       const data = employees.filter(employee => employee.salary > 40000)
+       
+        data.forEach(employee => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${employee.name} - $${employee.salary}`;
+            employeeList.appendChild(listItem);
+        });
+       //Task 2
+
+       const users = [ { id: 1, name: "Sudhan" }, { id: 2, name: "Kumar" }, { id: 3, name: "Ravi" } ]
+       
+       const userList = document.getElementById("userList");
+
+       const userdetail = users.find((e)=> e.id === 2)
+
+       const newelement = document.createElement("li")
+
+       newelement.innerHTML = userdetail.name
+
+       userList.appendChild(newelement)
+
+       //Task3
+
+       const products = [ { id: 1, name: "Laptop", price: 50000 }, { id: 2, name: "Mobile", price: 20000 }, { id: 3, name: "Keyboard", price: 1500 } ]; 
+       
+       const product = document.getElementById('product')
+
+       
+
+products.map((e,i)=>{
+     const newelement = document.createElement("li")
+
+       newelement.innerHTML = e.name
+
+       product.appendChild(newelement)
+})
+       
+
+
+       </script>
+</body>
+</html>
