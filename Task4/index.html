@@ -17,6 +17,8 @@
         </ul>
 
         <ul id="product"> </ul>
+
+        <p id="total"></p>
       </div>
        <script>
         //Task 1
@@ -60,8 +62,15 @@ products.map((e,i)=>{
 
        product.appendChild(newelement)
 })
-       
+       //Task4
 
+     const cart = [ { product: "Laptop", price: 50000 }, { product: "Mouse", price: 500 }, { product: "Keyboard", price: 1500 } ];   
+     
+     const newtotal = document.createElement("total")
+
+    const finalvalue =  cart.reduce((a,b)=> a + b.price)
+
+    console.log(finalvalue  )
 
        </script>
 </body>
